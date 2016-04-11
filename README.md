@@ -1,0 +1,2 @@
+# NamedIoT
+Composition of IoT devices into CPS in one of the challenges on modern architecture. The composition solutions relay on applications to orchestrate the interaction between the components of the system. ANTD is working on a novel approach to express the composition using NDN naming power. Moreover, this approach bypasses the need of a composition engine by providing in-network composition capabilities.
