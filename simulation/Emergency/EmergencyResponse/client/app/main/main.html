@@ -1,0 +1,55 @@
+<navbar></navbar>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Emergency Response</h1>
+    <p class="lead">In-Network composition for emergency response</p>
+    <img src="assets/images/rescue-operation.jpg" alt="rescue operation">
+  </div>
+</header>
+
+<vis-network data="main.nodes" options="options" events="events" ></vis-network>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Things:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.things">
+        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="main.deleteThing(thing)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Nodes:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="node in main.nodes">
+        <li><a href="#" tooltip="{{node.info}}">{{node.name}}<button type="button" class="close" ng-click="main.deleteNode(node)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Add thing</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="main.newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="main.addThing()">Add New</button>
+      </span>
+    </p>
+  </form>
+
+  <form class="thing-form">
+    <label>Add Node</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new node Nane here." ng-model="main.newNode.name">
+      <input type="text" class="form-control" placeholder="Add a new node position here." ng-model="main.newNode.position">
+      <input type="number" class="form-control" placeholder="Add a new node Edge From here." ng-model="main.newNode.edgef">
+      <input type="number" class="form-control" placeholder="Add a new node Edge To here." ng-model="main.newNode.edget">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="main.addNode()">Add New</button>
+      </span>
+    </p>
+  </form>
+</div>
+
+<footer></footer>
