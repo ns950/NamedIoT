@@ -21,9 +21,11 @@ The first step is to obtain the source code for ``NamedIoT`` and, its main depen
 ## Prerequisites
 
 -  Install the `ndn-cxx library <http://named-data.net/doc/ndn-cxx/current/INSTALL.html>` and its requirements
--  Install the `client-side URL transfer library`
+-  Install the `client-side URL transfer library` CURL:
+
 
     sudo apt-get install libcurlpp-dev
+    
     sudo apt-get install libcurl4-openssl-dev
 
 
@@ -33,7 +35,6 @@ The following basic commands should be used to build  ``NamedIoT``  on Ubuntu:
 
     ./waf configure
     ./waf
-    sudo ./waf install
 
 ## Build with examples
 
@@ -88,9 +89,6 @@ To run Mini-NDN with the IoT Home topology file, provide the filename as the fir
 ## **EXPERIMENTAL** Visualization tool
 
 The ``./simulation/Emergency`` contains advanced Emergency response use case as **Work In Progress**
-
-
-
 
 
 # Research context 
